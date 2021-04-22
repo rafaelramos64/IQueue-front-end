@@ -1,12 +1,12 @@
 <template>
-  <b-container fluid class="p-5">
+  <b-container class="modal-containers">
     <b-row class="register ml-auto mr-auto" >
       <b-col md="5" class="ml-auto mr-auto text-center">
         <b-row><b-col><h1>Criar conta</h1></b-col></b-row>
         <b-row><b-col><img height="260" src="../assets/logo_iqueue.png"/></b-col></b-row>
         <b-row class="pt-4">
           <b-col>
-            <h6> Ou faça <b style="color: #7B7DCE;"> <router-link to="/login" style="text-decoration: none"> Login </router-link></b> </h6>
+            <h6> Ou faça <b style="color: #7B7DCE;"> <router-link to="/login"> Login </router-link></b> </h6>
           </b-col>
         </b-row>
       </b-col>
@@ -19,6 +19,7 @@
                 label-for="name"
                 label-class="required"
               >
+                <span class="icons-forms"><i class="far fa-user fa-lg"></i></span>
                 <b-form-input
                   autocomplete="off"
                   id="name"
@@ -40,6 +41,7 @@
                 label-for="lastName"
                 label-class="required"
               >
+                <span class="icons-forms"><i class="far fa-user fa-lg"></i></span>
                 <b-form-input
                  @change="$v.register.lastName.$touch()"
                   autocomplete="off"
@@ -61,6 +63,7 @@
             label-for="email"
             label-class="required"
           >
+            <span class="icons-forms"><i class="fas fa-envelope fa-lg"></i></span>
             <b-form-input
               @change="$v.register.email.$touch()"
               autocomplete="off"
@@ -82,6 +85,7 @@
                 label-for="password"
                 label-class="required"
               >
+                <span class="icons-forms"><i class="fas fa-lock-open fa-lg"></i></span>
                 <b-form-input
                   @change="$v.register.password.$touch()"
                   autocomplete="off"
@@ -103,6 +107,7 @@
                 label-for="confirmPassword"
                 label-class="required"
               >
+                <span class="icons-forms"><i class="fas fa-lock fa-lg"></i></span>
                 <b-form-input
                   @change="$v.register.confirmPassword.$touch()"
                   id="confirmPassword"
@@ -139,7 +144,11 @@
           </b-row>
           <b-row class="ml-auto mr-auto pt-3 text-center">
             <b-col>
-              <b-button type="submit" variant="outline-success" pill>CRIAR</b-button>
+              <b-button
+                type="submit"
+                variant="outline-success"
+                >CRIAR
+              </b-button>
             </b-col>
           </b-row>
         </b-form>
@@ -191,13 +200,13 @@ export default {
 
 <style lang="css" scoped>
 .register {
+  border-radius: 10px;
   background-color: #fff;
-  width: 80%;
   padding-top: 3%;
   padding-bottom: 3%;
   min-height: 370px;
   position: relative;
-  bottom: -45px;
+  bottom: -35px;
   border: 1px solid #f8f8f8;
   /* box-shadow: 0px 5px 10px 0px rgba(153, 153, 153, 0.3); */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px 0px;

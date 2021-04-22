@@ -14,6 +14,7 @@ $back: #f2dede;
 $success: #18d26e;
  */
 
+/* Css for required inputs (asterisks ans warnings erros) */
 .required {
   position: relative;
   display: inline-block !important;
@@ -32,11 +33,29 @@ $success: #18d26e;
   color: #a94442;
 }
 
+/* Changes to inputs of forms */
 .form-control {
+  color: rgb(118, 118, 118) !important;
+  border-bottom: 1.5px solid rgb(130, 130, 130) !important;
   background-color: transparent !important;
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
+  padding-left: 2.5rem !important;
+}
+
+.icons-forms {
+  color: rgb(118, 118, 118) !important;
+  position: relative;
+  bottom: -2rem !important;
+  left: 0.8rem;
+  background-color: #fff !important;
+}
+
+label {
+  padding-left: 10px !important;
+  margin: 0 !important;
+  bottom: -15px;
 }
 
 .form-control:hover {
@@ -58,6 +77,7 @@ h1, h6 {
   border-color: #38C172;
   font-family: 'comfortaa';
   min-width: 50%;
+  border-radius: 10px !important;
 }
 
 .btn:hover {
@@ -69,4 +89,42 @@ h1, h6 {
 /* .classe-erro {
   background-color: rgba(165, 43, 43, 0.45) !important;
 } */
+
+a {
+  color: #191BA9 !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #1e1f46 !important;
+}
+
+/* Changes to modals */
+.modal-dialog {
+  min-width: 100% !important;
+  margin: 0 !important;
+}
+
+.modal-body {
+  padding: 0 !important;
+}
+
+#login, #register {
+  padding: 0 !important;
+}
+
+.modal-content {
+  background-color: #C1EAF2 !important;
+  height: 100vh !important;
+}
+
+.modal-header {
+  padding-bottom: 0! important;
+  border: none !important;
+}
+
+/* Changes to containers of register and login screen */
+.modal-containers {
+  height: 92vh !important;
+}
 
