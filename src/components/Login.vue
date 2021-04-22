@@ -47,8 +47,16 @@
               O campo senha é obrigatório.
             </p>
           </b-form-group>
-          <b-row class="text-right">
-            <b-col>
+          <b-row>
+            <b-col class="text-left" md="4">
+              <router-link
+                to="#"
+                style="color: #7B7DCE; font-family: 'Prociono'; font-size: 1.2rem; font-style: italic"
+                v-b-modal.register>
+                Cadastre-se
+              </router-link>
+            </b-col>
+            <b-col class="text-right" md="8">
               <router-link to="#">
                 <span
                   style="color: rgb(118, 118, 118); background-color: #fff;">
@@ -92,13 +100,20 @@
         </b-form>
       </b-col>
     </b-row>
+    <b-modal
+      hide-footer
+      id="register">
+      <Register />
+    </b-modal>
   </b-container>
 </template>
 
 <script>
 import { required, minLength } from 'vuelidate/lib/validators'
+import Register from '@/components/Register.vue'
 
 export default {
+  components: { Register },
   data () {
     return {
       login: {
