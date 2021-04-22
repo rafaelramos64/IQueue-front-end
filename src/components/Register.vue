@@ -165,6 +165,7 @@
 <script>
 import { required, minLength } from 'vuelidate/lib/validators'
 import Login from '../components/Login.vue'
+import axios from 'axios'
 
 export default {
   components: { Login },
@@ -192,9 +193,25 @@ export default {
 
   methods: {
     registerUser () {
+      const url = process.env.VUE_APP_URL_SERVER
       this.checkForm()
       if (!this.$v.register.$error) {
-        console.log('Usuário cadastrado!')
+        axios.post(`${url}/users`, {
+          firstName: this.register.name,
+          lastName: this.register.lastName,
+          email: this.register.email,
+          password: this.register.password
+        }).then(response => {
+          console.log(response)
+          if (response.status === 201) {
+            console.log('Usuário cadastrado!')
+          } else {
+            return JSON.parse({
+              status: response.status,
+              statusText: response.statusText
+            })
+          }
+        }).catch(error => console.error(error))
       }
     },
 
