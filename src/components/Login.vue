@@ -79,12 +79,12 @@
           </b-row>
           <b-row class="pt-1 text-center">
             <b-col>
-              <router-link to="#">
+              <router-link to="#" v-b-tooltip.hover.v-info.right title="Entrar com o Goolge">
                 <img height="40" class="rounded-pill social-icons" src="../assets/google.png" />
               </router-link>
             </b-col>
             <b-col>
-              <router-link to="#">
+              <router-link to="#" v-b-tooltip.hover.v-info.left title="Entrar com o Facebook">
                 <img height="45" class="rounded-pill social-icons facebook-icon" src="../assets/facebook.png" />
               </router-link>
             </b-col>

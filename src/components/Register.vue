@@ -6,7 +6,7 @@
         <b-row><b-col><img height="260" src="../assets/logo_iqueue.png"/></b-col></b-row>
         <b-row class="pt-4">
           <b-col>
-            <h6> Ou faça <b style="color: #7B7DCE;"> <router-link to="/login"> Login </router-link></b> </h6>
+            <h6> Ou faça <b style="color: #7B7DCE;"> <router-link to="#" v-b-modal.login> Login </router-link></b> </h6>
           </b-col>
         </b-row>
       </b-col>
@@ -154,13 +154,20 @@
         </b-form>
       </b-col>
     </b-row>
+    <b-modal
+      hide-footer
+      id="login">
+      <Login/>
+    </b-modal>
   </b-container>
 </template>
 
 <script>
 import { required, minLength } from 'vuelidate/lib/validators'
+import Login from '../components/Login.vue'
 
 export default {
+  components: { Login },
   data () {
     return {
       register: {

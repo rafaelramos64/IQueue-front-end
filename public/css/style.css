@@ -3,8 +3,8 @@
 }
 body {
   margin: 0 auto;
-  /* background-color: #C1EAF2 !important; */
-  background: linear-gradient(to left bottom, rgb(179, 247, 255) 0%, rgb(179, 255, 214) 100%) !important;
+  background-color: #C1EAF2 !important;
+  /*  background: linear-gradient(to left bottom, rgb(179, 247, 255) 0%, rgb(179, 255, 214) 100%) !important;*/
   /* background-color: #f8f9fa !important; */
 }
 
@@ -68,14 +68,14 @@ label {
 }
 
 h1, h6 {
-  font-family: 'comfortaa';
+  font-family: 'Prociono';
   font-weight: 800px;
 }
 
 .btn {
   /* background-color: #C1EAF2; */
   border-color: #38C172;
-  font-family: 'comfortaa';
+  font-family: 'Prociono';
   min-width: 50%;
   border-radius: 10px !important;
 }
