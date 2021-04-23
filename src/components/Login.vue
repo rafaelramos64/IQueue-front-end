@@ -50,7 +50,7 @@
           <b-row>
             <b-col class="text-left" md="4">
               <router-link
-                to="#"
+                to=""
                 style="color: #7B7DCE; font-family: 'Prociono'; font-size: 1.2rem; font-style: italic"
                 v-b-modal.register>
                 Cadastre-se
@@ -103,17 +103,17 @@
     <b-modal
       hide-footer
       id="register">
-      <Register />
+      <PpRegister />
     </b-modal>
   </b-container>
 </template>
 
 <script>
 import { required, minLength } from 'vuelidate/lib/validators'
-import Register from '@/components/Register.vue'
+import PpRegister from '@/components/PpRegister.vue'
 
 export default {
-  components: { Register },
+  components: { PpRegister },
   data () {
     return {
       login: {

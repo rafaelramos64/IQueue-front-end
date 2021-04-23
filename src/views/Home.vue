@@ -8,14 +8,13 @@
           <b-button
             v-b-modal.login
             class="mt-5 mb-5 button"
-            pill
             variant="outline-success">
             Entrar
           </b-button><br>
-          <p style=" font-family: 'Prociono'; font-size: 1.5rem;">
+          <p style="font-family: 'Prociono'; font-size: 1.5rem;">
             É novo por aqui?
             <b style="color: #7B7DCE; ">
-              <router-link to="#" v-b-modal.register> Cadastre-se </router-link>
+              <router-link to="" v-b-modal.register> Cadastre-se </router-link>
             </b>
           </p>
         </div>
@@ -29,21 +28,18 @@
     <b-modal
       hide-footer
       id="register">
-      <Register />
+      <Register/>
     </b-modal>
   </b-container>
 </template>
 
 <script>
-import Register from '@/components/Register.vue'
-import Login from '@/components/Login.vue'
+import Register from '../components/Register'
+import Login from '../components/Login'
 
 export default {
-  name: 'Home',
-  components: {
-    Register,
-    Login
-  }
+  components: { Register, Login },
+  name: 'Home'
 }
 </script>
 
@@ -58,9 +54,9 @@ $gradiente-home: linear-gradient( #38C172 0%, rgba(56, 193, 114, 0.31) 100%);
 }
 
 .button {
-  min-width: 60px;
-  font-size: 1.5rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
+  min-width: 60px !important;
+  font-size: 1.5rem !important;
+  padding-left: 1.2rem !important;
+  padding-right: 1.2rem !important;
 }
 </style>
