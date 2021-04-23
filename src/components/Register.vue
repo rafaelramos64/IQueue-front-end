@@ -17,8 +17,15 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import PpRegister from '@/components/PpRegister.vue'
 import LpRegister from './LpRegister.vue'
+=======
+import { required, minLength } from 'vuelidate/lib/validators'
+import Login from '../components/Login.vue'
+import Swal from 'sweetalert2'
+import axios from 'axios'
+>>>>>>> 935321415bba9269e140beff41346532d252b68c
 
 export default {
   name: 'Register',
@@ -34,11 +41,51 @@ export default {
     }
   },
 
+<<<<<<< HEAD
   watch: {
     checked (newValue, oldValue) {
       if (newValue === true) this.typeRegister = 'Pessoa jurídica'
       else {
         this.typeRegister = 'Pessoa física'
+=======
+  methods: {
+    SuccessOrErrorSaveUser: function (status, statusText) {
+      const title = status === 201 ? 'Success' : 'Error'
+      const text = status === 201 ? 'User Saved!' : statusText
+      const icon = status === 201 ? 'success' : 'error'
+      const timer = status === 201 ? 1200 : 2500
+      Swal.fire({
+        title,
+        text,
+        icon,
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#17a2b8',
+        timer
+      })
+    },
+
+    registerUser () {
+      const url = process.env.VUE_APP_URL_SERVER
+      this.checkForm()
+      if (!this.$v.register.$error) {
+        axios.post(`${url}/users`, {
+          firstName: this.register.name,
+          lastName: this.register.lastName,
+          email: this.register.email,
+          password: this.register.password
+        }).then(response => {
+          console.log(response)
+          this.SuccessOrErrorSaveUser(response.status, response.statusText)
+          if (response.status === 201) {
+            console.log('Usuário cadastrado!')
+          } else {
+            return JSON.parse({
+              status: response.status,
+              statusText: response.statusText
+            })
+          }
+        }).catch(error => console.error(error))
+>>>>>>> 935321415bba9269e140beff41346532d252b68c
       }
       return this.typeRegister
     }
