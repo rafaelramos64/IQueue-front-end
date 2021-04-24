@@ -6,7 +6,13 @@
         <b-row><b-col><img height="260" src="../assets/logo_iqueue.png"/></b-col></b-row>
         <b-row class="pt-4">
           <b-col>
-            <h6> Ou faça <b style="color: #7B7DCE;"> <router-link to="#" v-b-modal.login> Login </router-link></b> </h6>
+            <h6> Ou faça
+              <b style="color: #7B7DCE;">
+                <router-link to="" v-b-modal.login>
+                  Login
+                </router-link>
+              </b>
+            </h6>
           </b-col>
         </b-row>
       </b-col>
@@ -53,13 +59,13 @@
                 <span
                   class="erros-form"
                   v-if="$v.register.cpf.$error">
-                  O campo sobrenome é obrigatório.
+                  O campo cpf é obrigatório.
                 </span>
               </b-form-group>
             </b-col>
           </b-row>
           <b-form-group
-            label="Email address"
+            label="Email"
             label-for="email"
             label-class="required"
           >
@@ -81,7 +87,7 @@
           <b-row>
             <b-col>
               <b-form-group
-                label="Password"
+                label="Senha"
                 label-for="password"
                 label-class="required"
               >

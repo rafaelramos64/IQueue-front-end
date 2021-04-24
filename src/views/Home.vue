@@ -13,7 +13,7 @@
           </b-button><br>
           <p style="font-family: 'Prociono'; font-size: 1.5rem;">
             É novo por aqui?
-            <b style="color: #7B7DCE; ">
+            <b class="a">
               <router-link to="" v-b-modal.register> Cadastre-se </router-link>
             </b>
           </p>

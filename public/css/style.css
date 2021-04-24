@@ -117,11 +117,12 @@ h1, h6 {
   background-color: rgba(165, 43, 43, 0.45) !important;
 } */
 
-a {
-  color: #191BA9 !important;
+a, .a {
+  color: rgb(118, 118, 118) !important;
+  font-family: 'Prociono' !important;
 }
 
-a:hover {
+a:hover, .a:hover {
   text-decoration: none !important;
   color: #1e1f46 !important;
 }

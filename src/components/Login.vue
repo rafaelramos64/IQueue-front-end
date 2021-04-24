@@ -8,7 +8,7 @@
       <b-col class="pl-5 pr-5" style="top: 0rem;">
         <b-form @submit.prevent="Login()">
           <b-form-group
-            label="Email address"
+            label="Email"
             label-for="email"
             label-class="required"
           >
@@ -28,7 +28,7 @@
             </p>
           </b-form-group>
           <b-form-group
-            label="Password"
+            label="Senha"
             label-for="password"
             label-class="required"
           >
@@ -51,7 +51,7 @@
             <b-col class="text-left" md="4">
               <router-link
                 to=""
-                style="color: #7B7DCE; font-family: 'Prociono'; font-size: 1.2rem; font-style: italic"
+                style="font-size: 1.2rem;"
                 v-b-modal.register>
                 Cadastre-se
               </router-link>
@@ -61,7 +61,7 @@
                 <span
                   style="color: rgb(118, 118, 118); background-color: #fff;">
                   <i class="fas fa-key fa-lg"></i>
-                  <span style="color: #D65252">
+                  <span style="font-family: 'Prociono'; font-size: 1.1rem" class="a">
                     Esqueci minha senha
                   </span>
                 </span>
@@ -74,7 +74,7 @@
                 type="submit"
                 class="login-button"
                 variant="outline-success">
-                LOGAR
+                ENTRAR
               </b-button>
             </b-col>
           </b-row>
@@ -161,10 +161,6 @@ export default {
   border: 1px solid #f8f8f8;
   /* box-shadow: 0px 5px 10px 0px rgba(153, 153, 153, 0.3); */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px 0px;
-}
-
-span {
-  font-style: italic;
 }
 
 /* Changes for Logar Button */

@@ -31,7 +31,7 @@
                 <span
                   class="erros-form"
                   v-if="$v.legalPersonRegister.socialReason.$error">
-                  O campo nome é obrigatório.
+                  O campo razão social é obrigatório.
                 </span>
               </b-form-group>
             </b-col>
@@ -53,13 +53,13 @@
                 <span
                   class="erros-form"
                   v-if="$v.legalPersonRegister.cnpj.$error">
-                  O campo sobrenome é obrigatório.
+                  O campo cnpj é obrigatório.
                 </span>
               </b-form-group>
             </b-col>
           </b-row>
           <b-form-group
-            label="Email address"
+            label="Email"
             label-for="email"
             label-class="required"
           >
@@ -81,7 +81,7 @@
           <b-row>
             <b-col>
               <b-form-group
-                label="Password"
+                label="Senha"
                 label-for="password"
                 label-class="required"
               >
