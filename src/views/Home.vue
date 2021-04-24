@@ -48,7 +48,7 @@ $gradiente-home: linear-gradient( #38C172 0%, rgba(56, 193, 114, 0.31) 100%);
 
 .body-home {
   /* background: linear-gradient(to top left, #fff 50%, rgba(56, 193, 114, 0.31) 40%) !important; */
-  background: linear-gradient( 170deg, #38C172 50%, #fff 50.3% );
+  background: linear-gradient( 170deg, #13c09d 50%, #fff 50.3% );
   height: 100vh;
   width: 80%;
 }

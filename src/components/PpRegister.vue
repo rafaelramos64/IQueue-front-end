@@ -1,7 +1,7 @@
 <template>
   <b-container class="modal-containers">
     <b-row class="register ml-auto mr-auto" >
-      <b-col md="5" class="ml-auto mr-auto text-center">
+      <b-col md="5" class="ml-auto mr-auto mt-5 text-center">
         <b-row><b-col><h1>Criar conta</h1></b-col></b-row>
         <b-row><b-col><img height="260" src="../assets/logo_iqueue.png"/></b-col></b-row>
         <b-row class="pt-4">

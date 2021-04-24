@@ -5,7 +5,7 @@
         <b-row class="text-center"><b-col><h1 style="font-weight: 800">Login</h1></b-col></b-row>
         <b-row class="text-center"><b-col><img height="170" src="../assets/logo_iqueue.png"/></b-col></b-row>
       </b-col>
-      <b-col class="pl-5 pr-5" style="top: -1.2rem;">
+      <b-col class="pl-5 pr-5" style="top: 0rem;">
         <b-form @submit.prevent="Login()">
           <b-form-group
             label="Email address"
@@ -57,7 +57,7 @@
               </router-link>
             </b-col>
             <b-col class="text-right" md="8">
-              <router-link to="#">
+              <router-link to="">
                 <span
                   style="color: rgb(118, 118, 118); background-color: #fff;">
                   <i class="fas fa-key fa-lg"></i>
@@ -68,32 +68,32 @@
               </router-link>
             </b-col>
           </b-row>
-          <b-row class="pt-2 text-center">
+          <b-row class="mt-3 text-center">
             <b-col>
               <b-button
                 type="submit"
-                class="logar-button"
+                class="login-button"
                 variant="outline-success">
                 LOGAR
               </b-button>
             </b-col>
           </b-row>
-          <b-row class="text-center mt-4">
+          <b-row class="text-center mt-3">
             <b-col>
               <h6 style="color: rgb(118, 118, 118);">
                 Ou entre usando
               </h6>
             </b-col>
           </b-row>
-          <b-row class="pt-1 text-center">
-            <b-col>
-              <router-link to="#" v-b-tooltip.hover.v-info.right title="Entrar com o Goolge">
+          <b-row class="mt-2">
+            <b-col class="text-right">
+              <router-link to="" v-b-tooltip.hover.v-info.right title="Entrar com o Goolge">
                 <img height="40" class="rounded-pill social-icons" src="../assets/google.png" />
               </router-link>
             </b-col>
-            <b-col>
-              <router-link to="#" v-b-tooltip.hover.v-info.left title="Entrar com o Facebook">
-                <img height="45" class="rounded-pill social-icons facebook-icon" src="../assets/facebook.png" />
+            <b-col class="text-left">
+              <router-link to="" v-b-tooltip.hover.v-info.left title="Entrar com o Facebook">
+                <img height="42" class="rounded-pill social-icons facebook-icon" src="../assets/facebook.png" />
               </router-link>
             </b-col>
           </b-row>
@@ -153,7 +153,7 @@ export default {
   border-radius: 10px;
   background-color: #fff;
   width: 42%;
-  padding-top: 2%;
+  padding-top: 1%;
   padding-bottom: 0.5%;
   min-height: 93.6vh;
   position: relative;
@@ -168,7 +168,7 @@ span {
 }
 
 /* Changes for Logar Button */
-.logar-button {
+.login-button {
   padding: 0 20px !important;
   width: 100%;
   height: 45px;
@@ -182,6 +182,7 @@ span {
 
 .facebook-icon {
   padding: 0 !important;
+  margin: 0 !important;
 }
 
 .facebook-icon:hover {
