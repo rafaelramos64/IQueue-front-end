@@ -87,7 +87,7 @@ h1, h6 {
   font-family: 'Prociono';
   font-weight: 800px;
 }
-/*  Css for changes of buttons of registers screen*/
+/*  Css for changes of buttons */
 
 .button {
   min-width: 50% !important;
@@ -110,6 +110,24 @@ h1, h6 {
   background-color: #13c09d !important;
   color: #fff !important;
   border-color: #13c09d !important;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 10%), 0 6px 9px rgb(0 0 0 / 20%) !important;
+  /* box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%); */
+}
+
+.btn-outline-danger {
+  /* background-color: #C1EAF2; */
+  border-color: #ce242a !important;
+  color: #ce242a !important;
+  font-family: 'Prociono' !important;
+  border-radius: 10px !important;
+  font-family: 'Prociono' !important;
+}
+
+.btn-outline-danger:hover {
+  /* background: linear-gradient(to left bottom, rgb(179, 247, 255) 0%, rgb(179, 255, 214) 100%); */
+  background-color: #a94442!important;
+  color: #fff !important;
+  border-color: #a94442 !important;
   box-shadow: 0 0 0 1px rgb(0 0 0 / 10%), 0 6px 9px rgb(0 0 0 / 20%) !important;
   /* box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%); */
 }

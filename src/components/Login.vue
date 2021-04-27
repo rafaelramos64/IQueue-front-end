@@ -57,7 +57,7 @@
               </router-link>
             </b-col>
             <b-col class="text-right" md="8">
-              <router-link to="">
+              <router-link to="/recoverPassword">
                 <span
                   style="color: rgb(118, 118, 118); background-color: #fff;">
                   <i class="fas fa-key fa-lg"></i>

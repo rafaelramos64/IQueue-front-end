@@ -9,6 +9,12 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+
+  {
+    path: '/recoverPassword',
+    name: 'RecoverPassword',
+    component: () => import('@/views/recoverPassword')
   }
 ]
 
