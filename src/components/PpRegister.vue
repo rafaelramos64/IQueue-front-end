@@ -100,6 +100,7 @@
                   type="password"
                   placeholder="Senha"
                 ></b-form-input>
+                <span class="showHiddenPassword1"><i class="fas fa-eye fa-lg"></i></span>
                 <span
                   class="erros-form"
                   v-if="$v.register.password.$error">
@@ -121,6 +122,7 @@
                   type="password"
                   placeholder="Confimar senha"
                 ></b-form-input>
+                <span class="showHiddenPassword2"><i class="fas fa-eye fa-lg"></i></span>
                 <span
                   class="erros-form"
                   v-if="$v.register.confirmPassword.$error">
@@ -199,7 +201,30 @@ export default {
     }
   },
 
+  mounted () {
+    this.showHiddenPassword()
+  },
+
   methods: {
+    showHiddenPassword () {
+      const spanIcon1 = document.querySelector('.showHiddenPassword1')
+      const spanIcon2 = document.querySelector('.showHiddenPassword2')
+
+      spanIcon1.addEventListener('click', () => {
+        const input = document.getElementById('password')
+
+        if (input.type === 'text') input.type = 'password'
+        else input.type = 'text'
+      })
+
+      spanIcon2.addEventListener('click', () => {
+        const input = document.getElementById('confirmPassword')
+
+        if (input.type === 'text') input.type = 'password'
+        else input.type = 'text'
+      })
+    },
+
     SuccessOrErrorSaveUser: function (status, statusText) {
       const title = status === 201 ? 'Success' : 'Error'
       const text = status === 201 ? 'User Saved!' : statusText
@@ -216,18 +241,26 @@ export default {
     },
 
     registerUser () {
+      const fullName = this.register.name.split(' ')
+      const firstName = fullName[0]
+      const lastName = fullName.slice(1, [fullName.length]).join(' ')
+
       const url = process.env.VUE_APP_URL_SERVER
       this.checkForm()
       if (!this.$v.register.$error) {
         axios.post(`${url}/users`, {
-          firstName: this.register.name,
-          lastName: this.register.lastName,
+          firstName,
+          lastName,
           email: this.register.email,
           password: this.register.password
         }).then(response => {
           console.log(response)
+
           this.SuccessOrErrorSaveUser(response.status, response.statusText)
+
           if (response.status === 201) {
+            localStorage.user = 'concertar ainda'
+            localStorage.token = response.data.token
             console.log('Usuário cadastrado!')
           } else {
             return JSON.parse({
@@ -235,7 +268,10 @@ export default {
               statusText: response.statusText
             })
           }
-        }).catch(error => console.error(error))
+        }).catch(error => {
+          this.SuccessOrErrorSaveUser(400, error.message)
+          console.error(error)
+        })
       }
       return this.typeRegister
     },
@@ -251,5 +287,12 @@ export default {
 
 span {
   font-style: italic;
+}
+
+.showHiddenPassword1, .showHiddenPassword2 {
+  position: relative;
+  bottom: 2rem;
+  left: 85%;
+  color: rgb(118, 118, 118) !important
 }
 </style>
